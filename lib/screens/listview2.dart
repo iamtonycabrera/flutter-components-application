@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:components_application/theme/app_theme.dart';
+
 class ListView2Screen extends StatelessWidget {
   const ListView2Screen({Key? key}) : super(key: key);
 
@@ -17,8 +19,6 @@ class ListView2Screen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text('ListView2'),
-          elevation: 10,
-          backgroundColor: Colors.indigo,
         ),
         body: ListView.separated(
             itemCount: options.length,
@@ -26,7 +26,7 @@ class ListView2Screen extends StatelessWidget {
                   title: Text(options[index]),
                   trailing: const Icon(
                     Icons.arrow_forward_ios_outlined,
-                    color: Colors.indigo,
+                    color: AppTheme.primary,
                   ),
                   onTap: () {},
                 ),
