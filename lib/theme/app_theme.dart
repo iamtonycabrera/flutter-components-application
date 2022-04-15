@@ -15,6 +15,14 @@ class AppTheme {
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(primary: primary),
     ),
+    //FloatingActionButton Theme
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      backgroundColor: AppTheme.primary,
+    ),
+    //ElevatedButton Theme
+    elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+            primary: primary, elevation: 0, shape: const StadiumBorder())),
   );
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
