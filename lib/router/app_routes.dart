@@ -27,12 +27,12 @@ class AppRoutes {
         route: 'card',
         name: 'Card',
         screen: const CardScreen(),
-        icon: Icons.card_membership_outlined),
+        icon: Icons.card_membership_rounded),
     MenuOption(
         route: 'alert',
         name: 'Alert',
         screen: const AlertScreen(),
-        icon: Icons.add_alert_outlined),
+        icon: Icons.add_alert_rounded),
     MenuOption(
         route: 'avatar',
         name: 'Avatar',
@@ -42,12 +42,17 @@ class AppRoutes {
         route: 'animated',
         name: 'Animated',
         screen: const AnimatedScreen(),
-        icon: Icons.play_arrow_rounded),
+        icon: Icons.play_circle_filled_rounded),
     MenuOption(
         route: 'inputs',
         name: 'Inputs',
         screen: const InputsScreen(),
         icon: Icons.input_rounded),
+    MenuOption(
+        route: 'listviewBuilder',
+        name: 'InfiniteScroll & Pull2Refresh',
+        screen: const ListviewBuilderScreen(),
+        icon: Icons.build_circle_rounded),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {

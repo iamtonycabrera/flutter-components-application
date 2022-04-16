@@ -56,6 +56,9 @@ class InputsScreen extends StatelessWidget {
                   formProperty: 'email',
                   formValues: formValues,
                 ),
+                const SizedBox(
+                  height: 30,
+                ),
                 CustomInputField(
                   labelText: 'Password',
                   hintText: 'Write the password',
@@ -65,7 +68,25 @@ class InputsScreen extends StatelessWidget {
                   formValues: formValues,
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 30,
+                ),
+                DropdownButtonFormField<String>(
+                    value: 'Admin',
+                    items: const [
+                      DropdownMenuItem(value: 'Admin', child: Text('Admin')),
+                      DropdownMenuItem(
+                          value: 'Superuser', child: Text('Superuser')),
+                      DropdownMenuItem(
+                          value: 'Developer', child: Text('Developer')),
+                      DropdownMenuItem(
+                          value: 'Jr. Developer', child: Text('Jr. Developer')),
+                      DropdownMenuItem(value: 'Senior', child: Text('Senior')),
+                    ],
+                    onChanged: (value) {
+                      formValues['role'] = value ?? 'Admin';
+                    }),
+                const SizedBox(
+                  height: 45,
                 ),
                 ElevatedButton(
                   child: const SizedBox(
